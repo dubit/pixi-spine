@@ -6642,7 +6642,7 @@ var pixi_spine;
     function atlasParser() {
         return function atlasParser(resource, next) {
             if (!resource.data ||
-                !isJson(resource) ||
+                !resource.isJson ||
                 !resource.data.bones) {
                 return next();
             }
