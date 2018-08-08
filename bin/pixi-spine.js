@@ -6932,12 +6932,12 @@ var pixi_spine;
                             }
                         }
                         if (lt) {
-                            slot.bone.matrix.copy(lt);
+                            slot.bone.matrix.clone(lt);
                         }
                     }
                     else {
                         var lt = slotContainer.localTransform || new PIXI.Matrix();
-                        slot.bone.matrix.copy(lt);
+                        slot.bone.matrix.clone(lt);
                         slotContainer.localTransform = lt;
                         slotContainer.displayObjectUpdateTransform = SlotContainerUpdateTransformV3;
                     }

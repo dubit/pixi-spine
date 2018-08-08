@@ -270,12 +270,12 @@ namespace pixi_spine {
                             }
                         }
                         if (lt) {
-                            slot.bone.matrix.copy(lt);
+                            slot.bone.matrix.clone(lt);
                         }
                     } else {
                         //PIXI v3
                         let lt = slotContainer.localTransform || new PIXI.Matrix();
-                        slot.bone.matrix.copy(lt);
+                        slot.bone.matrix.clone(lt);
                         slotContainer.localTransform = lt;
                         (slotContainer as any).displayObjectUpdateTransform = SlotContainerUpdateTransformV3;
                     }
